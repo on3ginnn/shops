@@ -265,6 +265,7 @@ main{
   }
   .cart__img{
     min-height: 200px !important;
+    padding-top: 10px;
   }
   .zapadniy .obv{
     font-size: 35px;
