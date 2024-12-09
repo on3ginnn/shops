@@ -43,6 +43,14 @@ img{
 *{font-family:Monotype Corsiva;font-size: 40px; font-style: italic; font-weight: 700}
 
 h1{font-size: 70px; text-align: center; color: #7a3c02; font-weight: 900;}
+@media(max-width:767px){
+  h1{
+    font-size: 48px;
+    text-align: center;
+    color: #7a3c02;
+    font-weight: 900;
+  }
+}
 html,body{
   width: 100%;
   height: 100%;
@@ -178,7 +186,6 @@ main{
 .container{
   text-align: center;
   position: relative;
-
 }
 
 .flexbox{
@@ -190,6 +197,97 @@ main{
 .cart{
   padding: 10px;
   flex: 0 1 350px;
+}
+
+@media(max-width:767px){
+  *{
+    font-size: 30px;
+  }
+  .flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .cart{
+    padding: 0px;
+    flex: 0 1 49%;
+    margin: 0 0px;
+    min-height: 200px
+  }
+  .cart__img{
+    min-height: 250px !important;
+  }
+  .zapadniy .obv{
+    font-size: 50px;
+  }
+  .korona .obv{
+    font-size: 60px;
+  }
+  .shifa .obv{
+    font-size: 60px;
+  }
+  .alsu .obv{
+    font-size: 80px;
+  }
+  .devonskiy .obv{
+    font-size: 50px;
+  }
+  .megacenter .obv{
+    font-size: 50px;
+  }
+  .ilitmarket .obv{
+    font-size: 40px;
+  }
+  .kanion .obv{
+    font-size: 60px;
+  }
+}
+@media(max-width:580px){
+  *{
+    font-size: 25px;
+  }
+  .flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .cart{
+    padding: 0px;
+    flex: 0 1 48%;
+    margin: 0 0px;
+  }
+  .cart__img{
+    min-height: 200px !important;
+  }
+  .zapadniy .obv{
+    font-size: 35px;
+  }
+  .korona .obv{
+    font-size: 45px;
+  }
+  .shifa .obv{
+    font-size: 40px;
+  }
+  .alsu .obv{
+    font-size: 45px;
+  }
+  .devonskiy .obv{
+    font-size: 30px;
+  }
+  .megacenter .obv{
+    font-size: 30px;
+  }
+  .ilitmarket .obv{
+    font-size: 30px;
+  }
+  .kanion .obv{
+    font-size: 50px;
+  }
+}
+.obv{
+  display: block;
 }
 button{font-size: 50px;background-color:rgba(41, 167, 89, 0.0); position: relative; border: 0;position: relative;
     left: 50%;
@@ -217,7 +315,7 @@ html {
 
 .button {
     inline-size: 100%;
-    padding: 0.5lh 1.5lh;
+    padding: 20px 0;
     font: inherit;
     color: currentColor;
     background-color: #f28482;
@@ -228,12 +326,10 @@ html {
   .button:focus-visible {
     background-color: #f5cac3;
   }
-  .menu {
+
+  .menu__items {
     position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
     background-color: #f28482;
-  
     overflow: hidden;
     line-height: 0;
     color: transparent;
@@ -242,314 +338,335 @@ html {
   .menu-item {
     overflow: hidden;
   }
-  .menu-link {
-    display: block;
-    padding: 0.5lh 80px;
-  }
   .menu-link:hover,
   .menu-link:focus-visible {
     background-color: #f5cac3;
   }
-  .button.active ~ .menu {
+  .button.active ~ .menu__items {
     line-height: 1.2;
     color: currentColor;
   }
-
-
-
-  .button1 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button1:hover,
-  .button1:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu1 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item1 {
-    overflow: hidden;
-  }
-  .menu-link1 {
+  .menu-link {
     padding: 0;
   }
-  .menu-link1:hover,
-  .menu-link1:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button1.active ~ .menu1 {
-    line-height: 1.2;
-    color: currentColor;
-  }
-  .button1.active ~ .menu1 .menu-link1 {
+  .button.active ~ .menu__items .menu-link {
     display: block;
     padding: 10px 20px;
   }
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link{
+  display: block;
+  width: 50px;
+}
+.link.search{
+  width: 30px;
+}
+.link img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.button1 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button1:hover,
+.button1:focus-visible {
+  background-color: #f5cac3;
+}
+.menu1 {
+  background-color: #f28482;
+}
+.menu-item1 {
+  overflow: hidden;
+}
+.menu-link1 {
+  padding: 0;
+}
+.menu-link1:hover,
+.menu-link1:focus-visible {
+  background-color: #f5cac3;
+}
+.button1.active ~ .menu1 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.button1.active ~ .menu1 .menu-link1 {
+  display: block;
+  padding: 10px 20px;
+}
 
 
 
-  .button2 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button2:hover,
-  .button2:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu2 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item2 {
-    overflow: hidden;
-  }
-  .menu-link2 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link2:hover,
-  .menu-link2:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button2.active ~ .menu2 {
-    line-height: 1.2;
-    color: currentColor;
-  }
+.button2 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button2:hover,
+.button2:focus-visible {
+  background-color: #f5cac3;
+}
+.menu2 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
+}
+.menu-item2 {
+  overflow: hidden;
+}
+.menu-link2:hover,
+.menu-link2:focus-visible {
+  background-color: #f5cac3;
+}
+.button2.active ~ .menu2 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link2 {
+  padding: 0;
+}
+.button2.active ~ .menu2 .menu-link2 {
+  display: block;
+  padding: 10px 20px;
+}
+
+
+.button3 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button3:hover,
+.button3:focus-visible {
+  background-color: #f5cac3;
+}
+.menu3 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s;
+  position: relative;
+  border: 0;
+}
+.menu-item3 {
+  overflow: hidden;
+}
+.menu-link3:hover,
+.menu-link3:focus-visible {
+  background-color: #f5cac3;
+}
+.button3.active ~ .menu3 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link3 {
+  padding: 0;
+}
+.button3.active ~ .menu3 .menu-link3 {
+  display: block;
+  padding: 10px 20px;
+}
 
 
 
-  .button3 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button3:hover,
-  .button3:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu3 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s;
-    position: relative;
-    border: 0;
-  }
-  .menu-item3 {
-    overflow: hidden;
-  }
-  .menu-link3 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link3:hover,
-  .menu-link3:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button3.active ~ .menu3 {
-    line-height: 1.2;
-    color: currentColor;
-  }
+.button4 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button4:hover,
+.button4:focus-visible {
+  background-color: #f5cac3;
+}
+.menu4 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
+}
+.menu-item4 {
+  overflow: hidden;
+}
+.menu-link4:hover,
+.menu-link4:focus-visible {
+  background-color: #f5cac3;
+}
+.button4.active ~ .menu4 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link4 {
+  padding: 0;
+}
+.button4.active ~ .menu4 .menu-link4 {
+  display: block;
+  padding: 10px 20px;
+}
 
 
 
-
-  .button4 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button4:hover,
-  .button4:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu4 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item4 {
-    overflow: hidden;
-  }
-  .menu-link4 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link4:hover,
-  .menu-link4:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button4.active ~ .menu4 {
-    line-height: 1.2;
-    color: currentColor;
-  }
-
-
-
-
-  .button5 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button5:hover,
-  .button5:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu5 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item5 {
-    overflow: hidden;
-  }
-  .menu-link5 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link5:hover,
-  .menu-link5:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button5.active ~ .menu5 {
-    line-height: 1.2;
-    color: currentColor;
-  }
+.button5 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button5:hover,
+.button5:focus-visible {
+  background-color: #f5cac3;
+}
+.menu5 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
+}
+.menu-item5 {
+  overflow: hidden;
+}
+.menu-link5:hover,
+.menu-link5:focus-visible {
+  background-color: #f5cac3;
+}
+.button5.active ~ .menu5 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link5 {
+  padding: 0;
+}
+.button5.active ~ .menu5 .menu-link5 {
+  display: block;
+  padding: 10px 20px;
+}
 
 
-
-  .button6 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button6:hover,
-  .button6:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu6 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item6 {
-    overflow: hidden;
-  }
-  .menu-link6 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link6:hover,
-  .menu-link6:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button6.active ~ .menu6 {
-    line-height: 1.2;
-    color: currentColor;
-  }
-
-
-
-  .button7 {
-    inline-size: 100%;
-    padding: 0.5lh 1.5lh;
-    font: inherit;
-    color: currentColor;
-    background-color: #f28482;
-    border: none;
-    cursor: pointer;
-  }
-  .button7:hover,
-  .button7:focus-visible {
-    background-color: #f5cac3;
-  }
-  .menu7 {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5lh;
-    background-color: #f28482;
-  
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
-  }
-  .menu-item7 {
-    overflow: hidden;
-  }
-  .menu-link7 {
-    display: block;
-    padding: 0.5lh 80px;
-  }
-  .menu-link7:hover,
-  .menu-link7:focus-visible {
-    background-color: #f5cac3;
-  }
-  .button7.active ~ .menu7 {
-    line-height: 1.2;
-    color: currentColor;
-  }
+.button6 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button6:hover,
+.button6:focus-visible {
+  background-color: #f5cac3;
+}
+.menu6 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
+}
+.menu-item6 {
+  overflow: hidden;
+}
+.menu-link6:hover,
+.menu-link6:focus-visible {
+  background-color: #f5cac3;
+}
+.button6.active ~ .menu6 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link6 {
+  padding: 0;
+}
+.button6.active ~ .menu6 .menu-link6 {
+  display: block;
+  padding: 10px 20px;
+}
 
 
+.button7 {
+  inline-size: 100%;
+  padding: 20px 0;
+  font: inherit;
+  color: currentColor;
+  background-color: #f28482;
+  border: none;
+  cursor: pointer;
+}
+.button7:hover,
+.button7:focus-visible {
+  background-color: #f5cac3;
+}
+.menu7 {
+  position: relative;
+  display: grid;
+  margin-block-start: 0.5lh;
+  background-color: #f28482;
 
-  
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  transition: line-height 0.5s, color 0.5s; position: relative; border: 0;
+}
+.menu-item7 {
+  overflow: hidden;
+}
+.menu-link7:hover,
+.menu-link7:focus-visible {
+  background-color: #f5cac3;
+}
+.button7.active ~ .menu7 {
+  line-height: 1.2;
+  color: currentColor;
+}
+.menu-link {
+  padding: 0;
+}
+.button7.active ~ .menu7 .menu-link7 {
+  display: block;
+  padding: 10px 20px;
+}
+
+
