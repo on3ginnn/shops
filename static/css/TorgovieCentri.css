@@ -292,6 +292,50 @@ main{
     font-size: 50px;
   }
 }
+@media(max-width:375px){
+  *{
+    font-size: 25px;
+  }
+  .flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .cart{
+    padding: 0px;
+    flex: 0 1 48%;
+    margin: 0 0px;
+  }
+  .cart__img{
+    min-height: 200px !important;
+    padding-top: 10px;
+  }
+  .zapadniy .obv{
+    font-size: 30px;
+  }
+  .korona .obv{
+    font-size: 40px;
+  }
+  .shifa .obv{
+    font-size: 30px;
+  }
+  .alsu .obv{
+    font-size: 40px;
+  }
+  .devonskiy .obv{
+    font-size: 25px;
+  }
+  .megacenter .obv{
+    font-size: 25px;
+  }
+  .ilitmarket .obv{
+    font-size: 25px;
+  }
+  .kanion .obv{
+    font-size: 35px;
+  }
+}
 .obv{
   display: block;
 }
